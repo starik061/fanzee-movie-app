@@ -1,9 +1,9 @@
 <template>
-  <header>
+  <header class="main-container main-header">
     <nav>
       <ul>
         <li>
-          <router-link>Test Task</router-link>
+          <router-link to="/" class="nav-link">Test Task</router-link>
         </li>
       </ul>
     </nav>
@@ -16,6 +16,16 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+.main-header {
+  padding-top: 31px;
+  padding-bottom: 31px;
+  background-color: var(--background-color-grey);
+}
 
+.nav-link {
+  font-size: 32px;
+  font-weight: bold;
+
+}
 </style>

@@ -12,13 +12,14 @@ const routes = [
         path: '',
         component: MainPage,
       },
+      {
+        path: '/movie/:id',
+        name: 'MovieDetails',
+        component: () => import('@/components/MovieDetails.vue'), // Ленивая загрузка
+      },
     ],
   },
-  {
-    path: '/movie/:id',
-    name: 'MovieDetails',
-    component: () => import('@/components/DetailsPage.vue'), // Ленивая загрузка
-  },
+
 ];
 
 const router = createRouter({
