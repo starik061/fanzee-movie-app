@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import MainPage from '@/components/MainPage.vue';
+import MovieDetails from '@/components/MovieDetails.vue';
 
 const routes = [
   {
@@ -10,12 +11,12 @@ const routes = [
       {
         name: 'MainPage',
         path: '',
-        component: MainPage,
+        component: MainPage
       },
       {
         path: '/movie/:id',
         name: 'MovieDetails',
-        component: () => import('@/components/MovieDetails.vue'), // Ленивая загрузка
+        component: MovieDetails
       },
     ],
   },

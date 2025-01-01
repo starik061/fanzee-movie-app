@@ -1,4 +1,5 @@
 <template>
+  <h1 class="visually-hidden">Movies list</h1>
   <div class="main-container">
     <div class="cards-container">
       <MovieCard v-for="movie in moviesList" :key="movie.id" :movieDetails="movie" />
@@ -28,9 +29,11 @@ export default {
 <style lang="scss" scoped>
 .cards-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: start;
   align-items: flex-start;
   gap: 16px;
   padding: 32px 0;
+  margin: 0 auto;
 }
 </style>
