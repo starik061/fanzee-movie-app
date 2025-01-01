@@ -1,7 +1,8 @@
 {
   "name": "fanzee-movie-app",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://starik061.github.io/fanzee-movie-app/",
   "type": "module",
   "scripts": {
     "dev": "vite",
