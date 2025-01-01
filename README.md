@@ -2,6 +2,6 @@
 <h1 style="margin-top:0">Fanzee movies list</h1>
 <p>A simple demonstration app created with Vue 3 (Options API)</p>
   
-<img src="/public/fanzee-poster.jpg" width="200"/>
+<img src="/public/fanzee-poster.jpg" width="300"/>
 
-<p>Used technology stack: <b>Vue 3 (Options API), Vuetify, SCSS.</b></p>
+<p>Used technology stack: <b>Vue 3 (Options API)</b></p>
