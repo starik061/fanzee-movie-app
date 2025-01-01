@@ -1,6 +1,6 @@
 <template>
-  <router-link class="card-wrapper" :to="{ name: 'MovieDetails', params: { id: movieDetails.id } }">
-    <img class="movie-img" :src="movieDetails.poster || '/public/placeholder_image.jpg'" :alt="movieDetails.name">
+  <div class="card-wrapper">
+    <img class="movie-img" :src="movieDetails.poster || '/public/placeholder_image.avif'" :alt="movieDetails.name">
 
     <div class="card-text-container">
       <h3 class="movie-title">{{ this.movieDetails.name || "-" }}</h3>
@@ -21,7 +21,7 @@
     </ul>
 
     <div v-else class="tag-list-stub"></div>
-  </router-link>
+  </div>
 </template>
 
 <script>
@@ -54,11 +54,16 @@ export default {
   flex-basis: 296px;
   flex-shrink: 0;
   flex-grow: 0;
-  height: 306px;
   padding: 12px;
   border-radius: 12px;
   background-color: var(--background-color-grey);
   overflow: hidden;
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 0.8);
+  }
 }
 
 .movie-img {

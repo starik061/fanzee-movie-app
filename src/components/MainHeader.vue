@@ -1,7 +1,7 @@
 <template>
-  <header class="main-container main-header">
+  <header class="main-header">
     <nav>
-      <ul class="nav-list">
+      <ul class="main-container  nav-list">
         <li>
           <router-link to="/" class="nav-link" :class="{ 'active': this.$route.fullPath === '/' }">Main
             Page</router-link>
@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .main-header {
+  width: 100vw;
   padding-top: 31px;
   padding-bottom: 31px;
   background-color: var(--background-color-grey);
@@ -45,7 +46,7 @@ export default {
   font-weight: bold;
 
   &.active {
-    color: rgb(112, 56, 56);
+    color: rgb(122, 122, 122);
   }
 }
 </style>

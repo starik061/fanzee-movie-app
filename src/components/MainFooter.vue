@@ -1,6 +1,6 @@
 <template>
-  <footer class="main-container main-container__footer">
-    <ul class="footer-container">
+  <footer class="main-footer">
+    <ul class="main-container footer-container">
       <li>
         <router-link class="footer-text">Test Task, 2025</router-link>
       </li>
@@ -19,7 +19,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main-container__footer {
+.main-footer {
+  width: 100vw;
   background-color: var(--background-color-grey);
 }
 

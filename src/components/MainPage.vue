@@ -1,8 +1,9 @@
 <template>
   <h1 class="visually-hidden">Movies list</h1>
+
   <div class="main-container">
     <div class="cards-container">
-      <MovieCard v-for="movie in moviesList" :key="movie.id" :movieDetails="movie" />
+      <MovieCard v-for="movie in moviesList" :key="movie.id" :movieDetails="movie" @click="handleCardClick(movie.id)" />
     </div>
   </div>
 </template>
@@ -10,30 +11,41 @@
 <script>
 import MovieCard from "@/components/MovieCard.vue"
 import { getMovies } from "@/api/index.js"
+import productClickSound from "/public/product_click.mp3"
 
 export default {
   name: "MainPage",
   components: { MovieCard },
   data() {
     return {
-      moviesList: []
+      moviesList: [],
+      productClickSound
     }
   },
   async mounted() {
     this.moviesList = await getMovies()
-  }
+  },
 
+  methods: {
+    handleCardClick(movieId) {
+      this.$emit("play", movieId);
+    },
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .cards-container {
   display: flex;
+  width: 100%;
+  max-width: calc(1440px - 76px);
   flex-wrap: wrap;
   justify-content: start;
   align-items: flex-start;
   gap: 16px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 32px 0;
-  margin: 0 auto;
+  cursor: pointer;
 }
 </style>
