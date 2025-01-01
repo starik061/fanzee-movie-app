@@ -38,7 +38,6 @@ export default {
     },
 
     async handleCardClick(movieId) {
-      console.log("cls")
       await this.playAudio();
       this.$router.push({ name: "MovieDetails", params: { id: movieId } });
     },

@@ -67,4 +67,8 @@ export default {
     background-color: #702BFE;
   }
 }
+
+span {
+  text-transform: capitalize;
+}
 </style>
