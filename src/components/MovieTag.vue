@@ -1,6 +1,7 @@
 <template>
   <template v-if="type === 'rating'">
-    <div class="tag-container rating" :class="{ 'low': Number(data) < 5 }">
+    <div class="tag-container rating"
+      :class="{ 'low': Number(data) <= 4, 'middle': Number(data) > 4 && Number(data) <= 7 }">
       <RatingIcon />
       <span>{{ this.data.toFixed(1) }}</span>
     </div>
@@ -56,6 +57,10 @@ export default {
 
     &.low {
       background-color: #E81A0C;
+    }
+
+    &.middle {
+      background-color: purple;
     }
   }
 
