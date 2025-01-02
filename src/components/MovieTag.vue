@@ -1,7 +1,7 @@
 <template>
   <template v-if="type === 'rating'">
     <div class="tag-container rating" :class="{ 'low': Number(data) < 5 }">
-      <ratingIcon />
+      <RatingIcon />
       <span>{{ this.data.toFixed(1) }}</span>
     </div>
   </template>
@@ -23,10 +23,10 @@
 <script>
 import DurationIcon from "@/components/icons/DurationIcon.vue";
 import GenreIcon from "@/components/icons/GenreIcon.vue";
-import ratingIcon from "@/components/icons/ratingIcon.vue";
+import RatingIcon from "@/components/icons/RatingIcon.vue";
 
 export default {
-  components: { DurationIcon, GenreIcon, ratingIcon },
+  components: { DurationIcon, GenreIcon, RatingIcon },
 
   props: {
     type: {
