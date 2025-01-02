@@ -33,7 +33,11 @@
         <template v-if="movieDetails.actors">
           <h2 class="details-text-header">Actors</h2>
           <ul class="details-list">
-            <li v-for="(actor, actorIndex) in movieDetails.actors" :key="actor + actorIndex">{{ actor.name }}</li>
+            <li v-for="(actor, actorIndex) in movieDetails.actors" :key="actor + actorIndex">
+              <a class="actor-link" :href="`https://www.imdb.com/name/${actor.imdb_id}`" target="_blank"
+                rel="noopener noreferrer">{{
+                  actor.name }}</a>
+            </li>
           </ul>
         </template>
       </div>
@@ -130,5 +134,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.actor-link {
+  text-decoration: underline;
 }
 </style>
