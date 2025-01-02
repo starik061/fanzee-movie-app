@@ -5,7 +5,7 @@ export async function getMovies() {
       throw new Error(`Ошибка загрузки JSON: ${response.statusText}`);
     }
     const jsonData = await response.json();
-
+    jsonData.items.length = 16;
     return jsonData.items
   } catch (error) {
     console.error('Ошибка при запросе JSON:', error);
