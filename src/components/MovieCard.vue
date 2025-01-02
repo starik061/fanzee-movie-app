@@ -1,6 +1,7 @@
 <template>
   <div class="card-wrapper">
-    <img class="movie-img" :src="movieDetails.poster || '/public/placeholder_image.avif'" :alt="movieDetails.name">
+    <img class="movie-img" :src="movieDetails.poster || '/fanzee-movie-app/placeholder_image.avif'"
+      :alt="movieDetails.name">
 
     <div class="card-text-container">
       <h3 class="movie-title">{{ this.movieDetails.name || "-" }}</h3>

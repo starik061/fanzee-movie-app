@@ -3,8 +3,8 @@
     <div class="details-container">
       <div class="details-container-media">
         <h2 class="details-text-header">{{ movieDetails.name || '-' }}</h2>
-        <img class="movie-img" :src="movieDetails.poster || '/public/placeholder_image.avif'" :alt="movieDetails.name"
-          width="240px" height="320px">
+        <img class="movie-img" :src="movieDetails.poster || '/fanzee-movie-app/placeholder_image.avif'"
+          :alt="movieDetails.name" width="240px" height="320px">
         <ul v-if="areTags" class="tags-list">
           <li v-if="movieDetails.rating">
             <MovieTag :type="'rating'" :data="movieDetails.rating" />
