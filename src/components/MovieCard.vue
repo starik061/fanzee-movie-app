@@ -1,5 +1,5 @@
 <template>
-  <div class="card-wrapper">
+  <router-link :to="{ name: 'MovieDetails', params: { id: movieDetails.id } }" class="card-wrapper">
     <img class="movie-img" :src="movieDetails.poster || '/fanzee-movie-app/placeholder_image.avif'"
       :alt="movieDetails.name">
 
@@ -22,7 +22,7 @@
     </ul>
 
     <div v-else class="tag-list-stub"></div>
-  </div>
+  </router-link>
 </template>
 
 <script>

@@ -3,7 +3,7 @@
 
   <div class="main-container">
     <div class="cards-container">
-      <MovieCard v-for="movie in moviesList" :key="movie.id" :movieDetails="movie" @click="handleCardClick(movie.id)" />
+      <MovieCard v-for="movie in moviesList" :key="movie.id" :movieDetails="movie" />
     </div>
   </div>
 </template>
@@ -11,7 +11,6 @@
 <script>
 import MovieCard from "@/components/MovieCard.vue"
 import { getMovies } from "@/api/index.js"
-import productClickSound from "/public/product_click.mp3"
 
 export default {
   name: "MainPage",
@@ -19,17 +18,10 @@ export default {
   data() {
     return {
       moviesList: [],
-      productClickSound
     }
   },
   async mounted() {
     this.moviesList = await getMovies()
-  },
-
-  methods: {
-    handleCardClick(movieId) {
-      this.$emit("play", movieId);
-    },
   }
 }
 </script>
