@@ -43,6 +43,7 @@ export default {
   justify-content: start;
   align-items: flex-start;
   gap: 16px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   padding: 32px 0;

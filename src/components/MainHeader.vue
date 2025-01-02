@@ -30,6 +30,9 @@ export default {
 
 <style lang="scss" scoped>
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   padding-top: 31px;
   padding-bottom: 31px;

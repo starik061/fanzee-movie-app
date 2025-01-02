@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container details-container">
+  <div class="main-container">
     <div class="details-container">
       <div class="details-container-media">
         <h2 class="details-text-header">{{ movieDetails.name || '-' }}</h2>
@@ -72,6 +72,7 @@ export default {
   gap: 64px;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: 100px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
