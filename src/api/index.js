@@ -1,6 +1,6 @@
 export async function getMovies() {
   try {
-    const response = await fetch('./data/movies.json');
+    const response = await fetch('/fanzee-movie-app/data/movies.json');
     if (!response.ok) {
       throw new Error(`Ошибка загрузки JSON: ${response.statusText}`);
     }
@@ -15,7 +15,7 @@ export async function getMovies() {
 
 export async function getMovieById() {
   try {
-    const response = await fetch('./data/movie-details.json');
+    const response = await fetch('/fanzee-movie-app/data/movie-details.json');
     if (!response.ok) {
       throw new Error(`Ошибка загрузки JSON: ${response.statusText}`);
     }
