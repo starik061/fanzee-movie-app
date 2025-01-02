@@ -45,7 +45,6 @@ h6 {
   padding: 0;
 }
 
-
 .main-container {
   width: 1440px;
   margin: 0 auto;
@@ -55,7 +54,6 @@ h6 {
 address {
   font-style: normal;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -69,4 +67,15 @@ address {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+// Для анимацци перехода между страницами
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
