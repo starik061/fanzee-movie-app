@@ -82,6 +82,8 @@ export default {
 }
 
 .details-container-media {
+  position: sticky;
+  top: 124px;
   flex-basis: 240px;
   flex-shrink: 0;
   flex-grow: 0;
