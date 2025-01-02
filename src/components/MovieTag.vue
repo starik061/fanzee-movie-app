@@ -60,7 +60,7 @@ export default {
     }
 
     &.middle {
-      background-color: purple;
+      background-color: var(--background-color-purple);
     }
   }
 
@@ -69,7 +69,7 @@ export default {
   }
 
   &.duration {
-    background-color: #702BFE;
+    background-color: var(--background-color-purple);
   }
 }
 

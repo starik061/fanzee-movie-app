@@ -52,6 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .card-wrapper {
+  position: relative;
   flex-basis: 296px;
   flex-shrink: 0;
   flex-grow: 0;
@@ -61,9 +62,12 @@ export default {
   overflow: hidden;
 
   &:hover {
-    -webkit-box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 14px 1px rgba(255, 255, 255, 0.8);
+    transform: translate(-8px, -8px);
+    -webkit-box-shadow: 8px 8px 0px 0px var(--background-color-purple);
+    -moz-box-shadow: 8px 8px 0px 0px var(--background-color-purple);
+    box-shadow: 8px 8px 0px 0px var(--background-color-purple);
+    transition: all 0.2s ease;
+
   }
 }
 
